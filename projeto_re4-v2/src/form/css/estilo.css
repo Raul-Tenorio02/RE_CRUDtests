@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+  }
+
+body{
+    background-image: url('../img/entrada_fundo.jpg');
+    background-color: rgba(26, 24, 24, 1.0); ;
+    background-size: cover, cover;
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-position: top, bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 10px;
+    overflow: hidden;
+}
+
+form {
+    height: 90vh;
+    width: 60%; 
+    padding: 20px;
+    background-color: rgba(26, 24, 24, 0.7);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.conteudo .pergunta{
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "Secular One";
+    font-weight: 400;
+    margin-bottom: px;
+}
+
+.conteudo .descricao {
+    color: #ffffff;
+    font-family: "Rubik";
+    line-height: 24px;
+}
+.conteudo label{
+    color: #ffffff;
+    font-family: "Rubik";
+    line-height: 24px;
+}
+input{
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px; 
+    background-color: rgba(26, 24, 24, 0.6); 
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.1); 
+    color: antiquewhite;
+}
+button {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px; 
+    background-color: rgba(26, 24, 24, 0.6); 
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.1); 
+    color: antiquewhite;
+}
+input [type = "radio"]{
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #181717; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #696868; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #807d7d; 
+}
+@media (max-width: 1115px) {
+    body{
+        height:100vh;
+    }
+    form{
+        width:80%;
+    }
+}
+@media (max-width: 769px){
+    body{
+        height:100vh;
+    }
+    form{
+        width:80%;
+    }
+}
+@media (max-width: 425px){
+    body{
+        height:100vh;
+    }
+    form{
+        width: 90%;
+    }
+}

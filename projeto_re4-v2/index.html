@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Secular+One&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/estilos.css" />
+    <link rel="stylesheet" href="./src/css/responsivo.css" />
+
+    <title>Portfólio</title>
+</head>
+
+<body>
+    <a class="redirecionar" href="http://localhost:8080/projeto_re4_v2/src/form/form.html">
+        <button class="botaozinho">
+            <img src="src/imagens/umbrella_icone.png">
+        </button>
+    </a>
+    <main class="personagens">
+        <div class="personagem selecionado">
+            <img class="imagem" src="src/imagens/leonkennedy.jpeg" alt="Personagem Leon S. Kennedy" />
+            <div class="conteudo">
+                <i class="logo"></i>
+                <h2 class="nome-personagem">Leon S. Kennedy</h2>
+                <p class="descricao"> Após sobreviver aos horrores de Raccoon City seis anos atrás, o ex-policial
+                    tornou-se agente do governo, sem escolha própria. <br>
+                    Tendo passado por diversas missões desde o incidente, Leon amadureceu significantemente,
+                    sendo enviado em uma missão para resgatar a filha do presidente Graham.
+                </p>
+            </div>
+        </div>
+
+        <div class="personagem">
+            <img class="imagem" src="src/imagens/ashley_graham.jpg" alt="Personagem Ashley Graham" />
+            <div class="conteudo">
+                <i class="logo"></i>
+                <h2 class="nome-personagem">Ashley Graham</h2>
+                <p class="descricao">A filha desaparecida do presidente dos Estados Unidos.<br>
+                    Ashley foi sequestrada como parte de um plano arquitetado por Osmund Saddler, e levada para uma vila
+                    isolada na Europa, agora precisará lutar ao lado de Leon para conseguir voltar pra casa.</p>
+            </div>
+        </div>
+
+        <div class="personagem">
+
+            <img class="imagem" src="src/imagens/ada_wong.jpg" alt="Personagem Ada Wong" />
+            <div class="conteudo">
+                <i class="logo"></i>
+                <h2 class="nome-personagem">Ada Wong</h2>
+                <p class="descricao">Uma espiã que juntou-se a Leon durante o incidente de Raccoon City
+                    e desapareceu durante a destruição do laboratório subterrâneo da Umbrella. <br>
+                    Ada encontra-se com Leon na vila e dá suporte a ele de forma discreta,se revelando apenas mais
+                    tarde. Seu verdadeiro objetivo permanece um mistério.</p>
+            </div>
+        </div>
+
+        <div class="personagem">
+            <img class="imagem" src="src/imagens/luis_serra.jpg" alt="Personagem Luis Sera" />
+            <div class="conteudo">
+                <i class="logo"></i>
+                <h2 class="nome-personagem">Luis Serra</h2>
+                <p class="descricao">Luis Serra Navarro. Um homem misterioso feito de prisioneiro por Saddler. <br> Após
+                    encontrar-se com Leon, mostra saber mais do paradeiro da filha do presidente do que aparenta e está
+                    disposto a ajudar o agente Kennedy a encontrá-la. Suas motivações são desconhecidas.</p>
+            </div>
+        </div>
+    </main>
+    <ul class="botoes">
+        <li>
+            <button class="botao selecionado">
+                <img src="src/imagens/leon_icon.jpg" alt="Leon Icon" />
+            </button>
+        </li>
+        <li>
+            <button class="botao">
+                <img src="src/imagens/ashley_icon.jpg" alt="Ashley Icon" />
+            </button>
+        </li>
+        <li>
+            <button class="botao">
+                <img src="src/imagens/ada_icon.jpg" alt="Ada Icon" />
+            </button>
+        </li>
+        <li>
+            <button class="botao">
+                <img src="src/imagens/luis_icon.jpg" alt="Luis Icon" />
+            </button>
+        </li>
+    </ul>
+
+    <script src="./src/js/index.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>"
+    <script>
+        // Espera até que o Document Object Model esteja completamente carregado antes de executar o código interno; cria um novo objeto URLSearchParams, a partir da propriedade "search" do objeto window.location, que contém os parâmetros passados na URL após o "?".
+        document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    // Este bloco de código verifica se o parâmetro success está presente na URL e se seu valor é true.
+    if (urlParams.has('success') && urlParams.get('success') === 'true') {
+        // Exibe o pop-up de sucesso
+        Swal.fire({
+            icon: 'success',
+            title: 'Sucesso!',
+            text: 'Seu registro foi inserido com sucesso.',
+        }).then((result) => {
+            // Remove o parâmetro 'success' da URL e recarrega a página
+            urlParams.delete('success');
+            const newUrl = `${window.location.pathname}${urlParams.toString() ? '?' + urlParams.toString() : ''}`;
+            window.history.replaceState({}, document.title, newUrl);
+        });
+    }
+});
+        </script>
+</body>
+
+</html>

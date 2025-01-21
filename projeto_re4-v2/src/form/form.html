@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Secular+One&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/estilo.css" />
+
+    <title>Formulário</title>
+</head>
+
+<body>
+    <form id="form" method="post" action="http://localhost:8080/projeto_re4_v2/src/form/form.php">
+        <div class="conteudo">
+            <h2 class="pergunta">JORNADA.</h2>
+            <p class="descricao">Indique qual forma de aproveitar jogos mais se assemelha com você.</p>
+            <br><br>
+            <label>
+                <input type="radio" name="p1" value="Historia"> Foca somente no que é preciso para poder seguir o
+                curso da história, sem dispor muito tempo extra
+                aprimorando equipamentos, explorando o cenário, ou em atividades opcionais. 
+            </label>
+            <br><br>
+            <label>
+                <input type="radio" name="p1" value="Completista"> Busca concluir todas as atividades possíveis
+                ao longo do caminho, coletando recursos, ouvindo diálogos e resolvendo enigmas secundários.
+            </label>
+        </div>
+        <br><br>
+        <div class="conteudo">
+            <h2 class="pergunta">REJOGABILIDADE.</h2>
+            <p class="descricao"> Pra você, rejogar um jogo tem o propósito de: </p>
+            <br><br>
+            <label>
+                <input type="radio" name="p2" value="Coletaveis"> Desbloquear novos itens, modos de
+                jogo, cosméticos e conquistas que você ainda não possui.
+            </label>
+            <br><br>
+            <label>
+                <input type="radio" name="p2" value="Relembrar"> Relembrar fatores da história, prestando atenção
+                em novos detalhes narrativos e gráficos.
+            </label>
+            <br><br>
+            <label>
+                <input type="radio" name="p2" value="Passatempo"> Um pouco dos dois, além de se divertir com
+                diferentes maneiras de concluir as fases.
+            </label>
+        </div>
+        <br><br>
+        <div class="conteudo">
+            <h2 class="pergunta">AMBIENTAÇÃO.</h2>
+            <p class="descricao">Você se interessa mais por:</p>
+            <br><br>
+            <label>
+                <input type="radio" name="p3" value="TLOU"> Narrativas complexas e impactantes, com personagens profundos e controversos; uma ambientação semelhante a Resident Evil 4, recheado de momentos de tensão e um gameplay envolvente.
+            </label>
+            <br><br>
+            <label>
+                <input type="radio" name="p3" value="Uncharted4"> Campanhas extensas e personagens carismáticos, proporcionando
+                muita ação e adrenalina, bons momentos cômicos e missões secundárias, sem dispensar a complexidade narrativa.
+            </label>
+            <br><br>
+            <label>
+                <input class="botao" type="radio" name="p3" value="GOW"> Campanhas longas e mundo vasto semiaberto, com trilha sonora e cenários altamente detalhados, gameplay dinâmico repleto de possibilidades e personagens cativantes.
+            </label>
+        </div>
+        <br><br>
+        <div class="conteudo">
+            <h2 class="pergunta">Encontre mais aventuras inesquecíveis.</h2><br>
+            <p class="descricao">As perguntas possuem o intuito de avaliar a forma como você consome jogos em
+                geral, afim de recomendar experiências semelhantes.<br><br>Insira seu nome e email para receber seus
+                resultados, baseados em suas escolhas. Além, é claro, de permitir que possamos fazer mais recomendações
+                futuras, caso desejar.</p>
+            <br><br>
+            <div class="conteudo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="nome completo" required><br><br>
+            </div>
+
+            <div class="conteudo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="nickname@email.com" required>
+            </div>
+            <br><br>
+
+            <input type="submit" value="Enviar">
+    </form>
+    <br><br><br>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/list.css') }}">
+</head>
+<body>
+    <h1>INVENTÁRIO</h1>
+    <a class="add-item-button" href="{{ url_for('main.add_item') }}">
+        <img src="{{url_for('static', filename='images/add.png') }}" alt="Adicionar Novo Item">
+    </a>
+    
+    <div class="inventory">
+        {% for item in itens %}
+        <div class="slot" 
+             data-item-id="{{ item.id }}" 
+             data-item-name="{{ item.nome_item }}" 
+             data-item-description="{{ item.descricao }}" 
+             data-item-quantity="{{ item.quantidade }}">
+             <img src="{{ url_for('static', filename=item.icon) }}" alt="{{ item.nome_item }}">
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Modal para exibir detalhes do item -->
+    <div id="item-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="item-name">Nome do Item</h2>
+            <p id="item-description">Descrição do Item</p>
+            <p id="item-quantity">Quantidade: 0</p>
+            <div class="modal-actions">
+                <a id="edit-link" class="modal-action-button">Editar</a>
+                <form id="delete-form" method="POST">
+                    <button type="submit">Descartar</button>
+                </form>
+            </div>
+            <button id="close-modal">
+                <img src="{{ url_for('static', filename='images/fechar.png') }}" alt="Fechar">
+            </button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/inventory.js') }}"></script>
+</body>
+</html>

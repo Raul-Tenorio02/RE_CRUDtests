@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respostas dos usuários</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form_response.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Respostas Recebidas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Jornada</th>
+                    <th>Rejogabilidade</th>
+                    <th>Ambientação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                <tr>
+                    <td>{{ usuario.nome }}</td>
+                    <td>{{ usuario.email }}</td>
+                    <td>{{ usuario.p1 }}</td>
+                    <td>{{ usuario.p2 }}</td>
+                    <td>{{ usuario.p3 }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table><br><br>
+        <a href="{{ url_for('main.index') }}" class="button">Voltar para a Página Inicial</a>
+    </div>
+</body>
+</html>

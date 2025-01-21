@@ -1,0 +1,130 @@
+body {
+    background-color: rgba(26, 24, 24, 1.0); /* Cor de fundo (cinza escuro como exemplo) */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Ajuste a fonte, se necessário */
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 60px;
+}
+
+.add-item-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 0px 4px;
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    border-color: #fff;
+    width: 1%;
+}
+
+.add-item-button:hover {
+    background-color: rgb(184, 159, 159);
+}
+
+/* Inventário */
+.inventory {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: rgb(41, 37, 37);
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #ffffff20;
+    border-radius: 8px;
+}
+
+/* Slots */
+.slot {
+    width: 100px;
+    height: 100px;
+    background-color: #ccd0d3b4;
+    border: 1px solid #ffffff73;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.slot img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    position: relative; 
+    padding: 20px;
+    background-color: #1a1a1a;
+    border: 2px solid #ffffff50;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    width: 350px;
+    font-size: 15px;  
+}
+
+.modal-actions {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;  
+    gap: 10px;  
+    margin: 10px 0;
+}
+
+.modal-actions button,
+.modal-actions a {
+    flex: 0.5;
+    padding: 10px;
+    background-color: #ffffff50;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;  
+    text-align: center;  
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.modal-actions button:hover,
+.modal-actions a:hover {
+    background-color: #ffffff36;
+}
+
+#close-modal {
+    position: absolute; /* Posiciona o botão em relação ao .modal-content */
+    top: 10px; /* Margem do topo */
+    right: 10px; /* Margem da direita */
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 100%; /* Botão redondo */
+    padding: 5px 8px; /* Menor padding para manter o botão compacto */
+    cursor: pointer;
+    font-size: 14px; /* Ajusta o tamanho do texto */
+}

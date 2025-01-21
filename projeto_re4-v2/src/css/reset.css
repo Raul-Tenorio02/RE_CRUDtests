@@ -1,0 +1,16 @@
+/*Seleciona todos os elementos da página.
+1º Remove todas as margens dos elementos, garantindo que não haja espaçamento adicional ao redor deles.
+2º Remove todo o preenchimento interno dos elementos, garantindo que não haja espaçamento interno adicional.
+3º Define que a largura e altura de um elemento incluem o preenchimento e a borda, mas não a margem. Isso garante que o tamanho total do elemento seja sempre respeitado, mesmo ao adicionar preenchimento e borda.*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Seleciona todas as listas não ordenadas da página. Remove os estilos padrão de lista, como marcadores (pontos, números, etc.), garantindo que as listas não tenham nenhum estilo de marcador padrão.*/
+
+ul {
+    list-style: none;
+}

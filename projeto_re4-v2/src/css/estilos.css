@@ -1,0 +1,128 @@
+/*Define estilos para todos os elementos da página, removendo margens e preenchimentos padrão e usando box-sizing: border-box; para garantir que a largura e altura dos elementos incluam o preenchimento e a borda, mas não a margem.*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*Definem a altura do corpo da página como 100%.*/ 
+  html, body{
+    height: 100%;
+  }
+
+/*O corpo da página tem um fundo preto e está definido para não ter overflow (overflow: hidden;), para evitar barras de rolagem indesejadas.*/
+body {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+/*Cria um elemento pseudo-elemento que é fixado à parte superior esquerda da tela e cobre 80% da largura e 100% da altura do viewport, usando um gradiente linear que vai do preto para transparente para criar um efeito de escurecimento.*/
+main::after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+
+    background: linear-gradient(-233deg, #000 35%, rgba(0, 0, 0, 0) 65%) no-repeat;
+   
+}
+
+/*Define um estilo padrão para elementos com a classe .personagem, escondendo-os por padrão (display: none;) e ajustando a altura para ocupar 100% da altura do viewport (height: 100vh;).*/
+main .personagem {
+    display: none;
+    height: 100vh;
+}
+
+/*Exibe um elemento com a classe .personagem que foi selecionado, alterando seu display para block.*/
+main .personagem.selecionado {
+    display: block;
+}
+
+main .personagem .imagem {
+    width: 100%;
+    
+    
+    object-fit: cover;
+    
+}
+.redirecionar{
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    z-index: 2;
+}
+.redirecionar .botaozinho{
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/*Posiciona o conteúdo principal da página à direita, a 120 pixels da borda esquerda, e o alinha verticalmente ao centro.
+Os outros seletores abaixo definem estilos para diferentes partes da página, como o texto do nome do personagem, a descrição, o logotipo, os botões de seleção de personagem, etc.*/
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+}
+
+.conteudo .nome-personagem {
+    color: #ffffff;
+    font-size: 48px;
+    font-family: "Secular One";
+    font-weight: 400;
+    margin-bottom: px;
+}
+
+.conteudo .descricao {
+    color: #ffffff;
+    font-family: "Rubik";
+    line-height: 24px;
+}
+
+.conteudo .logo {
+    background-image: url("../imagens/logo_semfundo.png");
+    background-size: cover;
+    height: 140px;
+    width: 265px;
+    margin-bottom: 10px;
+}
+
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.botoes .botao {
+    border: none;
+    margin: 20px;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.botoes .botao img {
+    border-radius: 50%;
+}
+
+.botoes .botao.selecionado {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #D9D9D9;
+}
