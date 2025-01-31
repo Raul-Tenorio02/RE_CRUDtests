@@ -19,4 +19,13 @@ Projeto que simula um inventário de itens, permitindo realizar operações de b
    
    pip install -r requirements.txt
 
+3. No terminal, escreva:
+
+   .\venv\Scripts\activate
+   
+   (caso receba uma mensagem de erro, insira primeiro "Set-ExecutionPolicy Bypass -Scope Process", sem aspas)
+
+4. Em seguida, ainda no terminal: 
+
+   flask run
 
