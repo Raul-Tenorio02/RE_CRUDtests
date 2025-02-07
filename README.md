@@ -4,6 +4,8 @@ Aplicação web que apresenta personagens em uma tela inicial e permite que o us
 O sistema roda via requisições HTTP (post, get, put e delete), utilizando Python para o backend através do framework Flask. A estrutura de dados roda com SQLite e SQLAlchemy, permitindo manipulações rápidas.
 O visual do projeto foi construído em cima de HTML, CSS e JavaScript nativo. Atualmente, estou implementando responsividade em cada seção da aplicação.
 
+##
+
 **Sobre as versões**
 
 Versão 1: backend em PHP, utilizando ferramentas como USBWebServer e PHPmyadmin para realizar a estrutura de CRUD com MySQL.
