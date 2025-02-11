@@ -9,4 +9,5 @@ O visual do projeto foi construído em cima de HTML, CSS e JavaScript nativo. At
 **Sobre as versões**
 
 Versão 1: backend em PHP, utilizando ferramentas como USBWebServer e PHPmyadmin para realizar a estrutura de CRUD com MySQL.
+
 Versão 2 (atual): migração do backend para Python com framework Flask. Banco de dados em SQLite3.
