@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" th:href="@{/css/form_response.css}">
+    <link rel="stylesheet" th:href="@{/css/responsive.css}">
+
+    <title>Respostas</title>
+</head>
+<body>
+<div class="container">
+    <h1>Respostas Recebidas</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Jornada</th>
+            <th>Rejogabilidade</th>
+            <th>Ambientação</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="response : ${responses}">
+            <td th:text="${response.nome}"></td>
+            <td th:text="${response.email}"></td>
+            <td th:text="${response.p1}"></td>
+            <td th:text="${response.p2}"></td>
+            <td th:text="${response.p3}"></td>
+            <td>
+                <a th:href="@{/responses/delete/{id}(id=${response.id})}">
+                    <img src="*" alt="*">
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table><br><br>
+    <a th:href="@{/responses/form}" class="button">Voltar para a Página Inicial</a>
+</div>
+</body>
+</html>
